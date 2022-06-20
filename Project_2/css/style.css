@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+
+.main {
+    display: flex;
+}
+.card {
+    width: 26rem;
+    height: 30rem;
+    background-color: rgb(28, 134, 196);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card_conteiner-top {
+    color: #fff;
+    height: 50%;
+}
+.card_date {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.card_conteiner-bottom {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(186, 211, 45);
+    font-weight: bold;
+}
+.card_image {
+    width: 20%;
+    border-radius: 50%;
+}
+
