@@ -1,3 +1,7 @@
+:root {
+    --apilar: -5rem;
+    --espacio: -1.5rem
+}
 * {
     box-sizing: border-box;
     padding: 0;
@@ -9,21 +13,24 @@ html {
 body {
     font-size: 1.6rem;
     font-family: Arial, Helvetica, sans-serif;
-    padding: 1rem;
+    padding: 3rem;
 }
 
 .main {
     display: flex;
 }
 .card {
-    width: 26rem;
+    width: 25rem;
+    min-width: 25rem;
     height: 30rem;
     background-color: rgb(28, 134, 196);
+    box-shadow: 0 0 1rem;
     border-radius: 1.2rem;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: 300ms;
 }
 .card_conteiner-top {
     color: #fff;
@@ -47,3 +54,38 @@ body {
     border-radius: 50%;
 }
 
+.card {
+    position: relative;
+}
+section.card-primary {
+    left: 0;
+}
+.card:nth-of-type(2) {
+    left: var(--apilar);
+}
+.card:nth-of-type(3) {
+    left: calc( var(--apilar) * 2 );
+}
+.card:nth-of-type(4) {
+    left: calc( var(--apilar) * 3 );
+}
+.card:nth-of-type(5) {
+    left: calc( var(--apilar) * 4 );
+}
+
+.card:hover {
+    transform: rotate(6deg);
+    /* transform: translateY(-1rem); */
+}
+.card:hover ~ .card:nth-of-type(2) {
+    left: var(--espacio);
+}
+.card:hover ~ .card:nth-of-type(3) {
+    left: calc( var(--espacio) * 4);
+}
+.card:hover ~ .card:nth-of-type(4) {
+    left: calc( var(--espacio) * 8);
+}
+.card:hover ~ .card:nth-of-type(5) {
+    left: calc( var(--espacio) * 11);
+}
